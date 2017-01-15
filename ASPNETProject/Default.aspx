@@ -13,6 +13,10 @@
       Привіт!
         <p>Example 1</p>
         <% Response.Write("I'm ASP! Hello!"); %>
+        <p>Example 2</p>
+        <% Response.Write("<div style='background: black; color:white;'>Tag work</div>"); %>
+        <p>Example 3</p>
+        <% Response.Write("3+2="+(3+2)); %>
     </div>
     </form>
 </body>
