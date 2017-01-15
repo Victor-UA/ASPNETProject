@@ -109,7 +109,11 @@
     <Content Include="contacts.aspx" />
     <Content Include="css\normalize.css" />
     <Content Include="css\style.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="HTML_app\contacts.html" />
+    <Content Include="HTML_app\header.html" />
+    <Content Include="HTML_app\video.html" />
+    <Content Include="HTML_app\main.html" />
     <Content Include="Web.config" />
     <Content Include="WebForm2.aspx" />
   </ItemGroup>
@@ -121,12 +125,12 @@
     <Compile Include="contacts.aspx.designer.cs">
       <DependentUpon>contacts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForm2.aspx.cs">
@@ -137,6 +141,7 @@
       <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

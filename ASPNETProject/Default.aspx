@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ASPNETProject.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="ASPNETProject.Default" %>
 
 <!DOCTYPE html>
 
@@ -12,59 +12,29 @@
 <body>
     <form id="form1" runat="server">
     <div id="blog">
-        <div id="header">
-            <div id="logo" class="left">logo</div>
-            <div id="top-menu" class="left">
-                <ul>
-                    <li class="left"><a href="Default.aspx">Головна</a></li>
-                    <li class="left"><a href="Default.aspx?page=photo">Фотогалерея</a></li>
-                    <li class="left"><a href="Default.aspx?page=video">Відео</a></li>
-                    <li class="left"><a href="Default.aspx?page=contacts">Контакти</a></li>
-                </ul>
-
-            </div>
-        </div>
+        <% = header %>
         <div id="content">
-            <div id="authorisation" class="left">Authorisation</div>
+            <div id="authorisation" class="left">
+                <div style="padding: 10px">
+                    <h3>Authorisation</h3>
+                    <br />
+                    <asp:Label ID="Label1" runat="server" Text="email" Width="30%"></asp:Label>
+                    <asp:TextBox ID="tb_email" runat="server" Width="65%"></asp:TextBox>
+                    <br />
+                    <asp:Label ID="Label2" runat="server" Text="Пароль"  Width="30%"></asp:Label>
+                    <asp:TextBox ID="tb_password" runat="server" Width="65%" TextMode="Password"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Button ID="ButtonAuthorisation" runat="server" Text="Увійти" Width="100%" OnClick="ButtonAuthorisation_Click"/>
+                    <br />
+                    <br />
+                    <asp:Label ID="LabelTest" runat="server" Text="[]"></asp:Label>
+                </div>
+            </div>
             <article id="main">
-                <%
-                    if (Request.QueryString["page"] != null)
-                    {
-                        switch (Request.QueryString["page"])
-                        {
-                            case "video":
-                                Response.Write("Сторінка Відео");
-                                break;
-                            case "photo":
-                                Response.Write("Сторінка Фотогалерея");
-                                break;
-                            case "contacts":
-                                Response.Write("Сторінка Контактів");
-                                break;
-                            default:
-                                Response.Write("<h1>Помилка 404</h1> <p>Сторінку не знайдено</p>");
-                                break;
-                        }
-
-                    }
-                    else
-                    {
-                        for (int i = 0; i < 5; i++)
-                        {%>
-                <article class="blogAtricle">
-                    <article class="article-header">Подорож до моря</article>
-                    <article class="article-date">15.01.2017</article>
-                    <article class="article-content">Контент статті</article>
-                    <a href="#">Детальніше</a><br />
-                    <a href="#">Коментарі: 10</a>
-                </article>
-                        <% }
-                    }%>
-                
-                
+                <% = main %>
             </article>
         </div>
-        
         <div id="footer">Footer</div>
     </div>
     </form>
