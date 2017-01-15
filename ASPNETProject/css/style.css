@@ -37,6 +37,16 @@ ol, ul {
     min-height: 700px;
 }
 
+#authorisation {
+    width: 200px;
+    background-color: #b4d3ff;
+}
+
+#main {
+    margin-left: 200px;
+    background-color: #8fbafc;
+}
+
 #footer {
     background-color: #000;
     color: #fff;
@@ -44,6 +54,10 @@ ol, ul {
 
 .left {
     float: left;
+}
+
+.right {
+    float: right; 
 }
 
 #left {
