@@ -106,6 +106,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\normalize.css" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm2.aspx" />
